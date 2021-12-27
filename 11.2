@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	try
+	{
+		int a[5]={1,2,3,4,5};
+		int index;
+		cout<<"enter index value";
+		cin>>index;
+		if(index>=5)
+		throw "array out of bounds";
+		else if(index<0)
+		throw "index should not be negative";
+		else
+		{
+			a[index]=20;
+			cout<<a[index];
+		}
+	}
+		catch (const char *n)
+		{
+			cout<<n;
+		}
+		catch (const char *m)
+		{
+			cout<<m;
+		}
+	}
